@@ -1,0 +1,15 @@
+.map{height:650px;aspect-ratio:auto;background:#b9dcd4 url('landscape-bg.png') center center/cover no-repeat;touch-action:none;cursor:grab;user-select:none}
+.map.dragging{cursor:grabbing}
+.map .scene{display:none}
+.orbit-canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.map .scene-caption{z-index:4;pointer-events:none}
+.map .station{z-index:5;transform:translate(-50%,-100%);transition:box-shadow .18s,opacity .18s,left .06s,top .06s;box-shadow:0 7px 20px #164e5d3b;max-width:175px}
+.map .station:hover,.map .station:focus-visible{transform:translate(-50%,-105%);box-shadow:0 12px 24px #164e5d60}
+.map .station::after{content:"";position:absolute;left:calc(50% - 1px);top:100%;height:18px;width:2px;background:#fffdf8;box-shadow:0 0 0 1px #306b74aa}
+.orbit-hint{position:absolute;left:22px;bottom:18px;z-index:4;background:#f9fff4e8;color:#315d62;border:1px solid #fff;border-radius:12px;padding:9px 13px;font-size:12px;font-weight:800;box-shadow:0 4px 16px #326d7830;pointer-events:none}
+.orbit-controls{position:absolute;right:20px;bottom:18px;z-index:5;display:flex;gap:6px}
+.orbit-controls button{width:38px;height:38px;border-radius:11px;background:#fffdf8ed;color:#214f59;font-size:20px;box-shadow:0 4px 13px #326d7830}
+.orbit-controls button:hover,.orbit-controls button:focus-visible{background:white;outline:2px solid #2c8a88}
+@media(max-width:850px){.map{height:600px;min-height:0}.map .station{padding:7px 9px}.orbit-hint{left:12px;bottom:13px;max-width:165px;font-size:11px}.orbit-controls{right:12px;bottom:13px}}
+@media(max-width:480px){.map{height:540px;min-height:0}.map .station{gap:4px;padding:5px 7px}.map .station b{font-size:11px}.map .station .pin{width:20px;height:20px;font-size:10px}.map .station::after{height:10px}.orbit-hint{max-width:145px}.orbit-controls button{width:32px;height:32px;font-size:18px}.scene-caption{top:12px;left:12px;font-size:9px}}
+
